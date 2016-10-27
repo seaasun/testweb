@@ -12,7 +12,7 @@ body
     margin: 0px;
     padding: 5px 0px 0px 0px;
     color: #000000;
-    font-size: 9pt;
+    font-size: 12px;
     /*text-align: center;*/
     margin-left: auto;
     margin-right: auto;
@@ -7268,20 +7268,6 @@ table.dataGrid .align td
 	display:dislay;
 }
 
-#placeOrderForTurnkey{
-	display:none;
-}
-
-#advise_list_with_email
-{
-	display: none;
-}
-
-.advise_list_with_email_area
-{
-	display: none !important;
-}
-
 #ctl00_ctl00_uxContent_liChatUs_V4
 {
 	display:none;
@@ -7296,11 +7282,25 @@ table.dataGrid .align td
 {
 	display: none !important;
 }
+
+#placeOrderForTurnkey{
+	display:none;
+}
+#advise_list_with_email
+{
+	display: none;
+}
+
+.advise_list_with_email_area
+{
+	display: none !important;
+}
 /*-----------------patch---------*/
-.clearHtml
+h1.clearHtml
 {
 	margin: 0px; 
 	padding: 0px; 
 	font-size: 9pt; 
 	font-weight: normal;
+	display:inline;
 }
