@@ -1,0 +1,820 @@
+/*============== buttons styles, follow is example for using  button style====================
+
+	<input type="submit" class="button-save" value=""></input>
+	<input type="submit" class="button-edit" value=""></input>
+	<input type="submit" class="button-add" value=""></input>
+	<input type="submit" class="button-new" value=""></input>
+	<input type="submit" class="button-delete" value=""></input>
+	<input type="submit" class="button-cancel" value=""></input>
+	<input type="submit" class="button-back" value=""></input>
+	<input type="submit" class="button-remove" value=""></input>
+	<input type="submit" class="button-removeall" value=""></input>
+============================================================================================*/
+
+input.button-save, input.button-new, input.button-add, input.button-delete, input.button-edit, input.button-cancel, 
+input.button-back, input.button-remove, input.button-removeall, input.button-load, input.button-close, input.button-continue, 
+input.button-input-zips, input.button-search,input.button-refreshcount,input.button-ordermore,input.button-submit,input.button-check,
+input.button-create, input.button-ncoa_submit,input.button-disable,input.button-view,input.button-saveAsNew, input.button-changepassword,
+input.button-print, input.button-export, input.button-showonmap, input.button-printwithmenu, input.button-previous, input.button-next, input.button-update,
+input.button-browse, input.button-upload, input.button-clearfields, input.button-preview, input.button-send, input.button-signature, input.button-calculate, input.button-maptopdf,
+input.button-guess, input.button-uploads, input.button-buildnew, input.button-4info-browse, input.button-4info-addmore, input.button-4info-choose , input.button-4info-addoverlay ,
+input.button-4info-upload,input.button-4info-buildnew, input.button-4info-save, input.button-4info-cancel, input.button-4info-uploadfile, input.button-4info-search
+{
+	border: none;
+	background-color: Transparent;
+	background-repeat:repeat-x;
+	background-position:left top;
+	font-weight: bold;
+	line-height: 20px;	
+	color: #ffffff;
+	font-size: 10px;
+	padding: 0 10px 0 10px;
+	margin: 0;
+	text-align: center;
+	height: 20px;
+	width: 70px;
+	height: 20px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+/* TODO:  the hover effect probably won't work in IE(6?) because it's not an A tag */
+input.button-save
+{
+  background-image:url(assets/images/buttons/bt_save.gif);
+}
+
+input.button-save:hover
+{
+  background-image:url(assets/images/buttons/bt_save_hover.gif);
+}
+
+input.button-delete
+{
+  background-image:url(assets/images/buttons/bt_delete.gif);
+}
+
+input.button-delete:hover
+{
+  background-image:url(assets/images/buttons/bt_delete_hover.gif);
+}
+
+input.button-new
+{
+  background-image:url(assets/images/buttons/bt_new.gif);
+}
+
+input.button-new:hover
+{
+  background-image:url(assets/images/buttons/bt_new_hover.gif);
+}
+
+input.button-add
+{
+  background-image:url(assets/images/buttons/bt_add.gif);
+}
+
+input.button-add:hover
+{
+  background-image:url(assets/images/buttons/bt_add_hover.gif);
+}
+
+input.button-edit
+{
+  background-image:url(assets/images/buttons/bt_edit.gif);
+}
+
+input.button-edit:hover
+{
+  background-image:url(assets/images/buttons/bt_edit_hover.gif);
+}
+
+input.button-cancel
+{
+  background-image:url(assets/images/buttons/bt_cancel.gif);
+}
+
+input.button-cancel:hover
+{
+  background-image:url(assets/images/buttons/bt_cancel_hover.gif);
+}
+
+input.button-back
+{
+  background-image:url(assets/images/buttons/bt_back.gif);
+}
+
+input.button-back:hover
+{
+  background-image:url(assets/images/buttons/bt_back_hover.gif);
+}
+
+input.button-remove
+{
+  background-image:url(assets/images/buttons/bt_remove.gif);
+}
+
+input.button-remove:hover
+{
+  background-image:url(assets/images/buttons/bt_remove_hover.gif);
+}
+
+input.button-removeall
+{
+  background-image:url(assets/images/buttons/bt_removeall.gif);
+}
+
+input.button-removeall:hover
+{
+  background-image:url(assets/images/buttons/bt_removeall_hover.gif);
+}
+
+input.button-load
+{
+  background-image:url(assets/images/buttons/bt_load.gif);
+}
+
+input.button-load:hover
+{
+  background-image:url(assets/images/buttons/bt_load_hover.gif);
+}
+
+input.button-close
+{
+  background-image:url(assets/images/buttons/bt_close.gif);
+}
+
+input.button-close:hover
+{
+  background-image:url(assets/images/buttons/bt_close_hover.gif);
+}
+
+input.button-continue
+{
+  background-image:url(assets/images/buttons/bt_continue.gif);
+}
+
+input.button-continue:hover
+{
+  background-image:url(assets/images/buttons/bt_continue_hover.gif);
+}
+
+input.button-search
+{
+  background-image:url(assets/images/buttons/bt_search.gif);
+}
+
+input.button-search:hover
+{
+  background-image:url(assets/images/buttons/bt_search_hover.gif);
+}
+
+input.button-input-zips
+{
+	width: 110px;
+	background-image:url(assets/images/buttons/bt_input_zip.gif);
+}
+
+input.button-input-zips:hover
+{
+	width: 110px;
+	background-image:url(assets/images/buttons/bt_input_zip_hover.gif);
+}
+input.button-refreshcount
+{
+	width: 90px;
+	background-image:url(assets/images/buttons/bt_refreshcount.gif);
+}
+
+input.button-refreshcount:hover
+{
+	width: 90px;
+	background-image:url(assets/images/buttons/bt_refreshcount_hover.gif);
+}
+input.button-ordermore
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_ordermore.gif);
+}
+
+input.button-ordermore:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_ordermore_hover.gif);
+}
+input.button-submit
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_submit.gif);
+}
+
+input.button-buildnew
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_buildnew.gif);
+}
+
+input.button-uploads
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_uploads.gif);
+}
+
+input.button-submit:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_submit_hover.gif);
+}
+input.button-check
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_check.gif);
+}
+
+input.button-check:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_check_hover.gif);
+}
+input.button-create
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_create.gif);
+}
+
+input.button-create:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_create_hover.gif);
+}
+input.button-ncoa_submit
+{
+	width: 90px;
+	background-image:url(assets/images/buttons/bt_NCOASubmit.gif);
+}
+
+input.button-ncoa_submit:hover
+{
+	width: 90px;
+	background-image:url(assets/images/buttons/bt_NCOASubmit_hover.gif);
+}
+input.button-disable
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_disable.gif);
+}
+
+input.button-disable:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_disable_hover.gif);
+}
+input.button-view
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_view.gif);
+}
+
+input.button-view:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_view_hover.gif);
+}
+input.button-saveAsNew
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_saveAsNew.gif);
+}
+
+input.button-saveAsNew:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_saveAsNew_hover.gif);
+}
+
+
+input.button-changepassword
+{
+	width: 116px;
+	background-image:url(assets/images/buttons/bt_changepasswords.gif);
+}
+
+input.button-changepassword:hover
+{
+	width: 116px;
+	background-image:url(assets/images/buttons/bt_changepasswords_hover.gif);
+}
+
+input.button-print
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_print.gif);
+}
+
+input.button-print:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_print_hover.gif);
+}
+
+input.button-export
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_export.gif);
+}
+
+input.button-export:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_export_hover.gif);
+}
+
+input.button-showonmap
+{    
+    width: 91px;
+	background-image:url(assets/images/buttons/bt_showonmap.gif);
+}
+
+input.button-showonmap:hover
+{
+	width: 91px;
+	background-image:url(assets/images/buttons/bt_showonmap_hover.gif);
+}
+
+input.button-printwithmenu
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_printwithmenu.gif);
+}
+
+input.button-printwithmenu:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_printwithmenu_hover.gif);
+}
+
+input.button-previous
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_previous.gif);
+}
+
+input.button-previous:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_previous_hover.gif);
+}
+
+input.button-next
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_next.gif);
+}
+
+input.button-next:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_next_hover.gif);
+}
+
+input.button-update
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_update.gif);
+}
+
+input.button-update:hover
+{
+	width: 70px;
+	background-image:url(assets/images/buttons/bt_update_hover.gif);
+}
+
+input.button-browse
+{
+  background-image:url(assets/images/buttons/bt_browse.gif);
+}
+
+input.button-browse:hover
+{
+  background-image:url(assets/images/buttons/bt_browse_hover.gif);
+}
+
+input.button-upload
+{
+    width: 90px;
+    background-image:url(assets/images/buttons/bt_upload.gif);
+}
+
+input.button-upload:hover
+{
+    width: 90px;
+    background-image:url(assets/images/buttons/bt_upload_hover.gif);
+}
+
+input.button-clearfields
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_clearfields.gif);
+}
+
+
+input.button-clearfields:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_clearfields_hover.gif);
+}
+
+
+input.button-preview
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_preview.gif);
+}
+
+
+input.button-preview:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_preview_hover.gif);
+}
+
+input.button-send
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_send.gif);
+}
+
+
+input.button-send:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_send_hover.gif);
+}
+
+input.button-signature
+{
+	width: 90px;
+	background-image:url(assets/images/buttons/bt_save_signature.gif);
+}
+
+
+input.button-signature:hover
+{
+	width: 90px;
+	background-image:url(assets/images/buttons/bt_save_signature_hover.gif);
+}
+
+input.button-calculate
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_calculate.gif);
+}
+
+input.button-calculate:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_calculate_hover.gif);
+}
+
+input.button-maptopdf
+{
+    width: 85px;
+	background-image:url(assets/images/buttons/bt_maptopdf.gif);
+}
+
+input.button-maptopdf:hover
+{
+    width: 85px;
+	background-image:url(assets/images/buttons/bt_maptopdf_hover.gif);
+}
+
+input.button-guess
+{
+    width: 85px;
+	background-image:url(assets/images/buttons/bt_guess.gif);
+}
+
+input.button-guess:hover
+{
+    width: 85px;
+	background-image:url(assets/images/buttons/bt_guess_hover.gif);
+}
+
+input.button-buildnew:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_buildnew_hover.gif);
+}
+
+input.button-uploads:hover
+{
+	width: 85px;
+	background-image:url(assets/images/buttons/bt_uploads_hover.gif);
+}
+
+/* *********Link button styles******* */
+a.forward-button
+{	
+	background:url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat left 0;
+	color:#404040; 
+	text-decoration:none; 
+	height:23px; 
+	float:left; 
+	cursor:hand;
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+
+
+a.forward-button:hover
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat left -0;
+	color:#626262;
+}
+
+a.forward-button span
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat right 0;
+	padding:4px 22px 7px 0; 
+	margin:0 0px 0 32px; 
+	float:left; 
+	height:12px;
+	text-align:center;
+	min-width: 40px;
+}
+
+a.forward-button:hover span
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat right -0;    	 
+}
+
+a.forward-button-new {
+	background: url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat left 0;
+	color: #404040;
+	text-decoration: none;
+	height: 23px;
+	float: left;
+	cursor: hand;
+	margin: 0 10px 0 0;
+	font-weight: bold;
+}
+
+a.forward-button-new:hover span
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat right -0;    	 
+}
+
+a.forward-button-new span {
+    background: url("assets/images/buttons/ext/Bt_Fw_F.jpg") no-repeat scroll right 0 transparent;
+    float: left;
+    height: 12px;
+    margin: 0 0 0 32px;
+    min-width: 40px;
+    padding: 4px 22px 7px 0;
+    text-align: center;
+}
+
+
+a.back-button
+{	
+	background:url(assets/images/buttons/ext/Bt_Back_F.jpg) no-repeat  left 0;
+	color:#404040; 
+	text-decoration:none; 
+	height:23px; 
+	float:left; 
+	cursor:hand; 
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+
+a.back-button:hover
+{
+	background:url(assets/images/buttons/ext/Bt_Back_H.jpg) no-repeat  left 0;
+	color:#626262; 
+}
+
+a.back-button span
+{
+	background:url(assets/images/buttons/ext/Bt_Back_F.jpg) no-repeat  right 0;
+	padding:4px 22px 7px 0; 
+	margin:0 0px 0 32px; 
+	float:left; 
+	height:12px;
+	text-align:center;
+	min-width: 40px;
+}
+
+a.back-button:hover span
+{
+	background:url(assets/images/buttons/ext/Bt_Back_H.jpg) no-repeat  right 0;   	 
+}
+
+
+
+a.go-button
+{	
+	background:url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat left 0;
+	color:#404040; 
+	text-decoration:none; 
+	height:23px; 
+	float:left; 
+	cursor:hand;
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+
+a.go-button:hover
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat left -0;
+	color:#626262;
+}
+
+a.go-button span
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat right 0;
+	padding:4px 22px 7px 0; 
+	margin:0 0px 0 32px; 
+	float:left; 
+	height:12px;
+	text-align:center;
+	min-width: 40px;
+}
+
+a.go-button:hover span
+{
+	background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat right -0;    	 
+}
+
+input.button-4info-browse
+{
+    background-image: url("assets/images/buttons/browse_btn.png");
+    width:100px;
+    height:42px;
+}
+
+input.button-4info-addmore
+{
+	background-image: url("assets/images/buttons/addmoretext_btn.png");
+	width:133px;
+    height:41px;
+}
+input.button-4info-choose 
+{
+	background-image: url("assets/images/buttons/choose_from_library_btn.png");
+	height: 42px;
+    width: 192px;
+}
+input.button-4info-addoverlay
+{
+	background-image: url("assets/images/buttons/add_another_image_btn.png");
+	height: 41px;
+    width: 176px;
+}
+input.button-4info-buildnew
+{
+	background-image: url("assets/images/buttons/buildnew_btn.png");
+	height:42px;
+	width:132px;		
+}
+input.button-4info-upload
+{
+	background-image: url("assets/images/buttons/upload_btn.png");
+	height:42px;
+	width:100px;		
+}
+input.button-4info-cancel
+{
+	background-image: url("assets/images/buttons/cancel_btn.png");
+	height:42px;
+	width:100px;		
+}
+input.button-4info-save
+{
+	background-image: url("assets/images/buttons/save_btn.png");
+	height:42px;
+	width:100px;		
+}
+input.button-4info-uploadfile
+{
+	background-image: url("assets/images/buttons/uploadfile_btn.png");
+	height:42px;
+	width:132px;		
+}
+input.button-4info-search
+{
+	background-image: url("assets/images/buttons/search_btn.png");
+	height:42px;
+	width:100px;		
+}
+/* myacxiom part start */
+
+.ma-back-button
+{
+    background:url(assets/images/buttons/ext/Bt_Back_F.jpg) no-repeat  left 0;
+	color:#404040; 
+	text-decoration:none; 
+	height:23px; 
+	float:left; 
+	cursor:pointer; 
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+.ma-back-button span
+{
+    background:url(assets/images/buttons/ext/Bt_Back_F.jpg) no-repeat  right 0;
+	padding:4px 22px 7px 0; 
+	margin:0 0px 0 32px; 
+	float:left; 
+	height:12px;
+	text-align:center;
+	min-width: 40px;
+}
+.ma-next-button
+{
+    background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat  left 0;
+	color:#404040; 
+	text-decoration:none; 
+	height:23px; 
+	float:left; 
+	cursor:pointer; 
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+.ma-next-button span
+{
+    background:url(assets/images/buttons/ext/Bt_Fw_H.jpg) no-repeat  right 0;
+	padding:4px 22px 7px 0; 
+	margin:0 0px 0 32px; 
+	float:left; 
+	height:12px;
+	text-align:center;
+	min-width: 40px;
+}
+.ma-place-order-button
+{
+    background:url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat  left 0;
+	color:#404040; 
+	text-decoration:none; 
+	height:23px; 
+	float:right; 
+	cursor:pointer; 
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+.ma-place-order-button span
+{
+    background:url(assets/images/buttons/ext/Bt_Fw_F.jpg) no-repeat  right 0;
+	padding:4px 22px 7px 0; 
+	margin:0 0px 0 32px; 
+	float:left; 
+	height:12px;
+	text-align:center;
+	min-width: 40px;
+}
+a.btnAdd
+{
+	background: url(assets/images/Add.gif) no-repeat left 0;
+    height: 43px;
+    width: 81px;
+    display:block;
+}
+a.btnRemove
+{
+	background: url(assets/images/Remove.gif) no-repeat left 0;
+    height: 43px;
+    width: 81px;
+    display:block;
+}
+a.btnRemoveAll
+{
+	background: url(assets/images/RemoveAll.gif) no-repeat left 0;
+    height: 43px;
+    width: 81px;
+    display:block;
+}
+/* myacxiom part end */
+
+
+a.decline-button {
+    display:none;
+}
+
+a.decline-button:hover {
+    display:none;  
+}
+
+a.decline-button span {
+   display:none;
+}
+
+a.accept-button{
+	display:none;
+}
+
+a.accept-button:hover{
+	display:none;
+}
+
+a.accept-button span{
+	display:none;
+}

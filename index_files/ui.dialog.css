@@ -1,0 +1,158 @@
+﻿/* ---------- Class popup Styles ---------- */
+.blockHermes .popup{
+	position:absolute;
+	z-index:90;
+}
+
+.blockHermes .popup .box {
+    background-color:#FFFFFF;
+    border:1px solid #888888;
+    position:absolute;
+    z-index:12;
+}
+
+.blockHermes .popup .boxTop{
+	background: url(images/t.png) repeat-x top;
+	height:21px;
+}
+.blockHermes .popup .boxBottom{
+	background: url(images/b.png) repeat-x bottom;
+	height:21px;
+	clear:both;
+}
+
+.blockHermes .popup .boxTop .left,
+.blockHermes .popup .boxTop .right,
+.blockHermes .popup .boxBottom .left,
+.blockHermes .popup .boxBottom .right{
+	width:21px;
+	height:21px;
+}
+.blockHermes .popup .boxTop .left{
+	background:#fff url(images/tl.png) no-repeat;
+}
+.blockHermes .popup .boxTop .right{
+	background:#fff url(images/tr.png) no-repeat;
+}
+.blockHermes .popup .boxBottom .left{
+	background:#fff url(images/bl.png) no-repeat;
+}
+.blockHermes .popup .boxBottom .right{
+	background:#fff url(images/br.png) no-repeat;
+}
+
+.blockHermes .popup .left,
+.blockHermes .popup .middle,
+.blockHermes .popup .right{
+	float: left;
+}
+.blockHermes .popup .left{
+	background:transparent url(images/l.png) repeat-y scroll right center;
+	width:21px;
+	clear:left;	
+}
+.blockHermes .popup .right{
+	background:transparent url(images/r.png) repeat-y scroll left center;
+	width:21px;
+}
+
+.blockHermes .popup .closeBtn{
+	width:24px;
+	height:24px;
+	cursor:pointer;
+	font-size:1px;
+	position:absolute;
+	right:-8px;
+	top:-6px;
+	z-index:91;
+	background:transparent url(images/dialog_window_close.gif) no-repeat;
+}
+
+/******************************** Hermes Customize Dialog Css******************************/
+.blockHermes{
+	z-index:90;
+}
+
+.blockHermes .popup .left, .blockHermes .popup .middle, .blockHermes .popup .right {
+	float:none!important;
+	display: block!important;
+}
+
+.blockHermes .popup .box
+{
+	background-image:none;
+    background-repeat:repeat-y;
+    border:0px solid #888888;
+    display:block;
+    padding:0px;
+}
+
+.blockHermes .bodyleft{
+	background: transparent url(images/l.png) repeat-y scroll left top;
+	width: 21px;
+}
+
+.blockHermes .bodyright{
+	background: transparent url(images/r.png) repeat-y scroll right top;
+	width: 21px;
+}
+
+.blockHermes table.boxtable{
+	border-collapse: collapse;
+	border-spacing: 0px;
+	/*height: 100%;
+	width:100%;*/
+	table-layout: auto;
+	margin: 0px;
+}
+
+.blockHermes table.boxtable tr td{
+	margin: 0;
+	padding: 0;
+}
+
+/******************** Mini Card **************************************/
+#wsodMiniCard.popup
+{
+    position: absolute ;
+    z-index: 1200!important;
+}
+
+#wsodMiniCard.popup .box {
+    background-color:#FFFFFF;
+    background-image: none;
+    padding: 0px;
+    border:1px solid #888888;
+    position:absolute;
+    z-index:12;
+}
+
+/******************* Position Tip **********************************/
+.blockHermes .boxContent {                            
+	background-color:#F5F8F8;                                
+	/*background-image:url(../../../../assets/graphics/dropdown_bg.gif);*/
+	background-position:0 0;                                 
+	background-repeat:no-repeat;                             
+	border-bottom:1px solid #D1EEEA;                         
+}   
+
+/******************* Strategy Type Popup****************************/
+.blockStrategy .boxContent {                            
+	background-color:#fff;                                
+	background-image:none;
+	background-position:0 0;                                 
+	background-repeat:no-repeat;                             
+	border:6px solid #ccc;                         
+}
+
+/*--preload images--*/
+body:after{
+    display:none;
+    content: 
+    url(images/tl.png) url(images/tr.png) 
+    url(images/bl.png) url(images/br.png) 
+    url(images/l.png) url(images/r.png) 
+    url(images/b.png) url(images/t.png) 
+    url(images/dialog_window_close.gif);
+}
+   
