@@ -489,10 +489,10 @@ function __doPostBack(eventTarget, eventArgument) {
 		</div>
 		
 		<div class="ct-step-navs-section ct-step-navs-section-expand">
-			<div class="step-nav-header step-nav-header-current step-nav-header-expand" key="stepdemo" isexpanded="1" minstep="4" maxstep="6"><b>2.</b> Define Target Audience <span class="arrow_down"></span><span id="sl360_step_nav_demos_edit_action" class="sl360_edit_action hidden" onclick="uc.stepnav.Click_EditSelections_Demo();">EDIT</span></div>
+			<div class="step-nav-header step-nav-header-expand step-nav-header-current" key="stepdemo" isexpanded="1" minstep="4" maxstep="6"><b>2.</b> Define Target Audience <span class="arrow_down"></span><span id="sl360_step_nav_demos_edit_action" class="sl360_edit_action" onclick="uc.stepnav.Click_EditSelections_Demo();">EDIT</span></div>
 			<div class="step-nav-detail" id="step_nav_demos">
-				<div id="step_nav_demos_details" class="content">				    											</div>
-				<div id="step_nav_demos_details_action" class="action hidden">
+				<div id="step_nav_demos_details" class="content">				    												<span class="demotitle">Lifestyle Interests</span>						<ul class="demodetail">														<li>Golf</li> 							                 						</ul>												<span class="demotitle">Personicx Codes</span>						<ul class="demodetail">														<li>01 - Summit Estates</li> 														<li>02 - Established Elite</li> 							                 						</ul>											</div>
+				<div id="step_nav_demos_details_action" class="action">
 				    <a href="javascript: void(0)" onclick="uc.stepnav.Click_EditSelections_Demo();">Edit Selections</a>
 				</div>	
 				<textarea id="step_nav_demos_template" class="hidden">				    {#if $T.ListType ==  entity.enums.DataSourceType.Occupant}
@@ -550,7 +550,7 @@ function __doPostBack(eventTarget, eventArgument) {
 		<div class="ct-step-navs-section">
 			<div class="step-nav-header" key="stepresults" isexpanded="0" minstep="7" maxstep="7"><b>3.</b><span id="step-nav3">Review Count &amp; Quote</span> <span class="arrow_up"></span></div>
 			<div class="step-nav-detail hidden" id="step_nav_results">
-				<div id="step_nav_results_details" class="content"></div>
+				<div id="step_nav_results_details" class="content"><span class="demotitle">Selected/Available</span><br>					<span>19,372/19,372</span><br>					<span class="demotitle">Total Price: </span><br>					<span>$1,326.98</span></div>
 				<textarea id="step_nav_results_template" class="hidden">					&lt;span class="demotitle"&gt;Selected/Available&lt;/span&gt;&lt;br /&gt;
 					&lt;span&gt;{framework.common.formatNumber($T.TotalDesiredQty)}/{framework.common.formatNumber($T.TotalAvailableQty)}&lt;/span&gt;&lt;br /&gt;
 					&lt;span class="demotitle"&gt;Total Price: &lt;/span&gt;&lt;br /&gt;
@@ -2478,9 +2478,8 @@ function __doPostBack(eventTarget, eventArgument) {
             </div>
             <div class="break">
             </div>
-            <div id="demo_phoneoption_errormsg" class="message-error hidden">
-            </div>
-            <div id="ct_demo_phoneoption" style="padding-top: 15px; padding: 10px 0;">
+            <div id="demo_phoneoption_errormsg" class="message-error hidden"></div>
+            <div id="ct_demo_phoneoption" style="padding-top: 15px; padding: 10px 0;" class="">
                 <table>
                     <tbody><tr>
                         <td valign="top">
@@ -2488,7 +2487,7 @@ function __doPostBack(eventTarget, eventArgument) {
                         </td>
                         <td align="left">
                             <div>
-                                <input type="radio" name="demo-phoneoption" value="1" id="demo_po_nothing" class="">
+                                <input type="radio" name="demo-phoneoption" value="1" id="demo_po_nothing" class="" checked="checked">
                                 <label id="demo_po_nothing_label" for="demo_po_nothing" class="">Exclude phone numbers</label>
                             </div>
                             <div>
@@ -3177,11 +3176,11 @@ position:absolute;
 <br><br>
 <h3 id="heading3" class="text3" style="display: none; margin-left: 30px;"><img src="./index_files/text3.png"></h3>
 <br><br>
-<h3 id="heading4" class="text4" style="display: block; margin-left: 80px; opacity: 0.204838;"><img src="./index_files/text4.png"></h3>
+<h3 id="heading4" class="text4" style="display: none; margin-left: 80px;"><img src="./index_files/text4.png"></h3>
  <br><br><br>
-    <h3 class="flying-text active-text" style="opacity: 1; margin-left: 294.399px;"><img src="./index_files/cloud_s.png"></h3>
-    <h3 class="middle-cloud" style="margin-left: 168.826px;"><div id="loadingtext" style="margin-left: 40.6883px;"><div id="text-content" style="display: block;">Loading Target Areas Audience...</div><a href="javascript:;" id="randomizer"><em></em></a></div></h3>    
-    <h3 class="right-cloud" style="opacity: 1; margin-left: 199.2px;"><img src="./index_files/cloud_s.png"></h3>
+    <h3 class="flying-text active-text" style="opacity: 1; margin-left: 81.6718px;"><img src="./index_files/cloud_s.png"></h3>
+    <h3 class="middle-cloud" style="margin-left: 168.179px;"><div id="loadingtext" style="margin-left: 40.1494px;"><div id="text-content" style="display: block; opacity: 0.997781;">Loading Target Areas Codes...</div><a href="javascript:;" id="randomizer"><em></em></a></div></h3>    
+    <h3 class="right-cloud" style="opacity: 1; margin-left: 399.036px;"><img src="./index_files/cloud_s.png"></h3>
 </div>
 <div style="width:700px; margin:auto; text-align:center;">
     <p style="margin:15px; padding:0px;"><img src="./index_files/count_loading.gif" alt="waiting..."></p>
@@ -3709,7 +3708,7 @@ position:absolute;
     <div id="payment_message_error" class="message-error hidden" name="Payment">
     </div>
     <div>
-        <div style="width: 440px; float: left;" id="leftContainer">
+        <div style="width: 440px; float: left; max-height: 1550px;" id="leftContainer">
             <div id="result_error" class="hidden" style="color: Red;">
             </div>
             <div id="result_mobile_only_standalone" class="hidden">
@@ -3722,11 +3721,10 @@ position:absolute;
                 </div>
             </div>            
           <div name="payment_information" class="payment-info">
-            <div id="payment_orderdetails">
-            </div>
+            <div id="payment_orderdetails"><table id="orderDetails" style="width:100%;">		<tbody>			<tr>				<td colspan="2" class="results_table_header" style="border:none;">								List Buy Order Information:												</td>			</tr>			<tr>				<td class="table_row_header">Order Date:</td>				<td>Thursday, Oct 27, 2016 11:50 AM</td>			</tr>			<tr>				<td class="table_row_header">Qty Available:</td>				<td>				    				        19,372				    				</td>			</tr>						<tr>				<td class="table_row_header">Qty Selected:</td>				<td>19,372</td>			</tr>																		        						    									        						    						    			    <tr>				    <td class="table_row_header">Price Per Record:</td>				    <td>$0.06850</td>			    </tr>			    													   	   	        			  <tr>				<td class="table_row_header">Enter Promotion Code and press ENTER:</td>				<td><input id="results_info_promocode" value="" type="text" title="Promotion Code" style="width: 80px;" onkeydown="javascript:uc.result.Promotion_Change_KeyDown(event)" onchange="javascript:uc.result.Promotion_Change();"></td>			  </tr>			 						    		     		     		 		   									<tr>			    <td class="table_row_header">Total Price:</td>			    <td>$1,326.98<span id="results_tax_wording" class="hidden"> + Tax</span></td>		    </tr>		    		    		    									    			      <tr>				    <td class="table_row_header">Earned Points:</td>				    <td>1,327</td>			      </tr>			    											    		    		        			    			    											</tbody>	    </table></div>
           </div>
           
-           <div id="ct_right_detail_panel" style="margin-top:15px;">
+           <div id="ct_right_detail_panel" style="margin-top:15px;" class="">
                <div>
                     <div id="ct_result_list_usage" class="list_usage_outer">
                         <div>
@@ -3734,9 +3732,7 @@ position:absolute;
                         </div>
                         <div class="results_table_header">
                             List Usage</div>
-                        <div id="ct_list_usage_container">
-                         
-                        </div>
+                        <div id="ct_list_usage_container">                        <div>                                <input id="results_listusage_multitime_1" data-mul="1" name="results_listusages" value="1" type="radio" onclick="uc.result.ListUsageSelection();">                                <label for="results_listusage_multitime_1">                                    I will use this list   one time.                                </label>                                                            </div>                                            <div>                                <input id="results_listusage_multitime_2" data-mul="2" name="results_listusages" value="1.25" type="radio" onclick="uc.result.ListUsageSelection();">                                <label for="results_listusage_multitime_2">                                    I will use this list   two times.                                </label>                                                               <span id="results_listusage_pricediff_2" class="">(+$331.75)</span>                                                                 <input type="button" class="slhelp" primarykey="Define List Usage" secondarykey="" helpwidth="830"><i class="fa fa-question-circle tip slhelp hidden" primarykey="Define List Usage" secondarykey="" helpwidth="830" aria-hidden="true"></i>                                                               </div>                                            <div>                                <input id="results_listusage_multitime_100" data-mul="100" name="results_listusages" value="1.5" type="radio" onclick="uc.result.ListUsageSelection();">                                <label for="results_listusage_multitime_100">                                    I will use this list   multiple times.                                </label>                                                               <span id="results_listusage_pricediff_100" class="">(+$663.49)</span>                                                                 <input type="button" class="slhelp" primarykey="Define List Usage" secondarykey="" helpwidth="830"><i class="fa fa-question-circle tip slhelp hidden" primarykey="Define List Usage" secondarykey="" helpwidth="830" aria-hidden="true"></i>                                                               </div>                    </div>
                         
                         <textarea id="ct_list_usage_template" style="display: none;">                    {#foreach $T as record} 
                        &lt;div&gt;
@@ -3756,21 +3752,21 @@ position:absolute;
                  </textarea>
                     </div>
                     
-				    <div id="ct_result_list_format" class="list_usage_outer">
+				    <div id="ct_result_list_format" class="list_usage_outer hidden">
 					    <div class="results_table_header">
-						    Need Mailing Labels?<input id="result_help_mailinglabels" type="button" class="slhelp" primarykey="Review Count &amp; Quote - List Format" secondarykey=""><i class="fa fa-question-circle tip slhelp hidden" primarykey="Review Count &amp; Quote - List Format" secondarykey="" aria-hidden="true"></i></div>
+						    Need Mailing Labels?<input id="result_help_mailinglabels" type="button" class="slhelp" primarykey="Review Count &amp; Quote - List Format" secondarykey="Consumer"><i class="fa fa-question-circle tip slhelp hidden" primarykey="Review Count &amp; Quote - List Format" secondarykey="" aria-hidden="true"></i></div>
 					    <div>
 						    <div>
 							    <input id="results_sendlabels" name="results_needlabels" value="1" checked="checked" type="radio" onclick="uc.result.ListUsageSelection();">
 							    <label for="results_sendlabels">
 								    Yes send me</label>
-							    <select id="ct_results_sendlabels_count" onchange="uc.result.ListUsageSelection();">
+							    <select id="ct_results_sendlabels_count" onchange="uc.result.ListUsageSelection();" disabled="disabled">
 								    <option selected="selected" value="1">1</option>
 								    <option value="2">2</option>
 								    <option value="3">3</option>
 							    </select>
-							    <span>set(s) of printed mailing labels </span><span id="results_labels_pricediff" class="hidden">(+$60.00)</span><br>
-							    <span id="results_needlabels_ocr_line" style="padding-left: 30px;">
+							    <span>set(s) of printed mailing labels </span><span id="results_labels_pricediff" class="">($384.58)</span><br>
+							    <span id="results_needlabels_ocr_line" style="padding-left: 30px;" class="hidden">
 								    <input id="results_needlabels_ocr" onclick="" type="checkbox"><label for="results_needlabels_iocr">Include
 									    "Or Current Resident" after name.</label></span>
 						    </div>
@@ -3795,8 +3791,7 @@ position:absolute;
                             <img style="vertical-align:bottom;" src="./index_files/mobile_ico.png"> Add a Mobile Ad Campaign</label>
                         <a href="javascript:void(0)" onclick="uc.result.PopUpRenderNewMobile();" class="helpico"></a><i class="fa fa-question-circle tip hidden" onclick="uc.result.PopUpRenderNewMobile();"></i>
                     </div>
-                    <div id="ct_results_mobile_content" master="1" class="hidden" style="background-color:#eefaf5;padding:10px;">
-                    </div>
+                    <div id="ct_results_mobile_content" master="1" class="hidden" style="background-color:#eefaf5;padding:10px;"></div>
                 </div>
                     <textarea id="ct_result_campaigns_template" style="display: none;">                    {#foreach $T as record} 
                        &lt;div class="float-left"&gt;
@@ -3827,9 +3822,7 @@ position:absolute;
                       <a target="_blank" href="https://www.facebook.com/business/adaccountcreate">Get a Facebook Ad Account</a> 
                     </div>
                 </div>
-                    <div id="result_mobile_upsell_error" class="hidden" style="margin-top:2px; margin-bottom:2px;color:Red;">
-		                A minimum of 9,000 records is required for Facebook and Mobile campaigns.
-		            </div>
+                    <div id="result_mobile_upsell_error" class="hidden" style="margin-top:2px; margin-bottom:2px;color:Red;"></div>
                 </div>
             </div>
             
@@ -3847,19 +3840,16 @@ position:absolute;
                 </div>
             </div>
             
-            <div id="ct_results_geos" style="margin-top:15px;">
-                <img alt="" src="./index_files/spinner2.gif">
-            </div>
+            <div id="ct_results_geos" style="margin-top:15px;"><div id="adjustdiv1" style="">						<div style="">		<table id="adjustdt1" style="width: 100%">																			<tbody><tr>							<td class="td-broder-raduis" bgcolor="#a9a8af" width="100%"><span class="whitetext"><strong>Address Information:</strong></span>&nbsp;&nbsp;<span class="blktext"><a href="javascript:uc.result.Click_EditSelections_Geo()">Change Address</a></span></td>						</tr>												<tr>							<td class="td-broder-raduis">							     <span style="text-align:left;"><a href="javascript:void(0);" onclick="javascript: uc.result.NailPoint(this);" address="Ancala, Scottsdale, AZ, United States"> Ancala, Scottsdale, AZ, United States </a></span>	   							      									      								          <span style="float:right; margin-right: 10px;">			      							            Radius: <input attr="geo_result_miles" type="text" title="Radius" style="width: 50px;" onfocus="" maxlength="6" size="6" value="15" address="Ancala, Scottsdale, AZ, United States" name="myFeatureValue"><span class="radius_unit" style="margin-left:5px;">mile(s)</span> 							          </span>							            							      							</td>   						</tr>																			  <tr>						     <td>						         <span class="blktext"><a href="javascript:uc.result.ResetMiles()">Recalculate</a></span>						     </td>						  </tr>																<tr>						<td class="td-broder-raduis">							<div id="geo_result_raduisMap" style="height: 200px; position: relative; background-color: rgb(229, 227, 223); overflow: hidden;"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: 96px; top: -56px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -160px; top: -56px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 352px; top: -56px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 30;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 96px; top: -56px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -160px; top: -56px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 352px; top: -56px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 96px; top: -56px;"><canvas draggable="false" height="256" width="256" style="user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -160px; top: -56px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 352px; top: -56px;"></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 436px; height: 200px;"><img src="./index_files/StaticMapService(1).GetMapImage" style="width: 436px; height: 200px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: -160px; top: -56px; transition: opacity 200ms ease-out;"><img src="./index_files/vt(12)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 352px; top: -56px; transition: opacity 200ms ease-out;"><img src="./index_files/vt(13)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 96px; top: -56px; transition: opacity 200ms ease-out;"><img src="./index_files/vt(14)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;" class="gm-style-pbc"><p class="gm-style-pbt">使用双指移动地图</p></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"><div style="z-index: -202; cursor: pointer; display: none;"><div style="width: 30px; height: 27px; overflow: hidden; position: absolute;"><img src="./index_files/undo_poly.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 90px; height: 27px;"></div></div></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=33.598315,-111.83003&amp;z=8&amp;t=m&amp;hl=zh-CN&amp;gl=US&amp;mapclient=apiv3" title="点击以在 Google 地图上查看此区域" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="./index_files/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 68px; top: 10px;"><div style="padding: 0px 0px 10px; font-size: 16px;">地图数据</div><div style="font-size: 13px;">地图数据 ©2016 GS(2011)6020 Google, INEGI</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./index_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 144px; bottom: 0px; width: 256px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">地图数据</a><span>地图数据 ©2016 GS(2011)6020 Google, INEGI</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">地图数据 ©2016 GS(2011)6020 Google, INEGI</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 84px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/zh-CN_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">使用条款</a></div></div><div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="./index_files/sv5.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 112px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="向 Google 报告道路地图或图像中的错误" href="https://www.google.com/maps/@33.5983146,-111.8300296,8z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">报告地图错误</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="放大" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./index_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="缩小" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./index_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="街景小人控件" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="./index_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="街景小人位于地图上面" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./index_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="街景小人控件" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./index_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="将地图旋转 90 度" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="./index_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="./index_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="显示街道地图" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 24px; font-weight: 500;">地图</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 30px; text-align: left; display: none;"><div draggable="false" title="显示带地形的街道地图" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./index_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">地形</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="显示卫星图像" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left: 0px; min-width: 48px;">卫星图像</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 30px; text-align: left; display: none;"><div draggable="false" title="显示带有街道名称的图像" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./index_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">地名</label></div></div></div></div></div></div>						</td>					</tr>						</tbody></table>				</div>				<div style="max-height: 158px; overflow: auto; overflow-y: scroll;" id="ct_result_radius_div">		    <table id="ct_result_raduis_address_table" width="100%" style="border: 1px solid rgb(204, 204, 204); border-spacing: 0pt; border-collapse: collapse; background-color: white;">			    <tbody>                    <tr>                      <td style="background-color: rgb(236, 249, 255); border: 1px solid rgb(204, 204, 204); padding: 1px;">                        <span class="blktext">                        <strong>                          List Quantity:                        </strong>                        </span>                                                <span class="blktext">                        <a href="javascript:uc.result.Hide_Detail();" id="raduis_hide_detail" class="hidden">                        Hide Details                        </a>                        <a href="javascript:uc.result.Show_Detail();" id="raduis_show_detail">                        Show Details                        </a>                        </span><br>                         <span class="blktext" id="span_seereport" name="span_seereport">                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="javascript:uc.result.ShowDemoBreakdownAndGeoDetails(this);" id="SeeReport" name="SeeReport">                          See Report                        </a>                        </span>                                              </td>                                            <td width="20%" bgcolor="#ecf9ff" align="center" style="background-color: rgb(236, 249, 255); border: 1px solid rgb(204, 204, 204); padding: 1px;" class="blktext">                        <strong>                          Qty Available                        </strong>                      </td>                                                                                        <td width="22%" bgcolor="#a9a8af" align="center" class="blktext">                        <strong>                          Distance                        </strong>                      </td>                                            <td width="20%" bgcolor="#ecf9ff" align="center" colspan="2" style="background-color: rgb(236, 249, 255); border: 1px solid rgb(204, 204, 204); padding: 1px;" class="blktext">                        <strong>                          Qty <br>Desired                        </strong>                      </td>                    </tr>                                        <tr class="geoDetails hidden">                        <td style=" text-align: center;" colspan="3">                          Loading geographic details...                          <br>                          <img src="./index_files/spinner2.gif" alt="waiting...">                       </td>                    </tr>                                        <tr>                      <td align="right" style="border: 1px solid rgb(204, 204, 204); padding: 1px; background-color: white;" class="blktext">                        <strong>                          Total:                        </strong>                      </td>                                                                  <td align="center" style="border: 1px solid rgb(204, 204, 204); padding: 1px 0px 0px 10px; background-color: white;" class="blktext">                        <strong id="Strong1">			                19372                        </strong>                      </td>                                                                                        <td style="border: 1px solid rgb(204, 204, 204); padding: 1px 0px 0px 10px; background-color: white;" class="blktext">&nbsp;                      </td>                                            <td colspan="2" align="center" style="border: 1px solid rgb(204, 204, 204); padding: 1px; background-color: white;" class="blktext">                        <input id="Text1" type="text" rowtype="total" style="width: 50px;  float: inherit;" size="6" value="19372" max="19372" name="myDesiredQuantity" title="Desired Quantity">                      </td>                    </tr>              </tbody>		   </table>		</div>								</div></div>
             
-            <div id="ct_results_audience" style="margin-top:15px;">
-            </div>
+            <div id="ct_results_audience" style="margin-top:15px;"><div class="title_outer" style="margin-top:0;">        <strong>Target Audience</strong>&nbsp;&nbsp;        <span class="smalltext"><a href="javascript:uc.result.Click_EditSelections_Demo()">Edit Selections</a></span>    </div>    	<div id="ct_results_audience_panel" style=" max-height:190px; overflow:auto">		<table width="100%" style="border-spacing: 0pt; border-collapse: collapse; background-color: white;">		<tbody>            <tr>      <td width="100%" class="results_phone_option" colspan="2">        Phone Option: No Phones      </td>    </tr>        <tr>      <td style="border: 1px solid rgb(204, 204, 204); padding: 1px; background-color: white; font-weight: normal; font-size: 11px; color: rgb(0, 0, 0); line-height: 14px; font-family: verdana,helvetica,sans-serif;" colspan="2">                                   <u>Lifestyle Interests</u>                            <li style="margin-left: 20px;">                Golf              </li>			     			  <br>			                <u>Personicx Codes</u>                            <li style="margin-left: 20px;">                01 - Summit Estates              </li>			                <li style="margin-left: 20px;">                02 - Established Elite              </li>			     			  <br>			  		       </td>         </tr>  </tbody></table><table width="100%" style="border-spacing: 0pt; border-collapse: collapse; background-color: white;"><tbody>    <tr id="special_links1" class="hidden">        <td class="results_target_audience hidden">            <span id="demoBreakdown" class="hidden" style="margin-left:10px;">			    <a id="ToShowBreakdownLink" href="javascript:void(0);" onclick="javascript:uc.result.ShowDemobreakdown(this)">View Count Breakdown Report&nbsp;»</a>                       		    </span>		            </td>        <td class="results_target_audience hidden">            <span id="twoDimensionalReport" class="hidden" style="margin-left:10px;">			    <a id="ShowTwoDimensionalReport" href="javascript:void(0);" onclick="javascript:uc.result.ShowGeoAndDemoForTwoDimensionalReport()">Two Dimensional Matrix Report&nbsp;»</a>                       		    </span>        </td>    </tr>        <tr id="special_links2" class="hidden">        <td class="results_target_audience hidden">            <span id="infoUSACountReport" class="hidden" style="margin-left:10px;">		        <a id="ShowInfoUSAGetCountReport" href="javascript:void(0);" onclick="javascript:uc.result.ShowRequestCountReport()">Get Count Report&nbsp;»</a>                       	        </span>        </td>        <td class="results_target_audience hidden">            <span id="suppressionOrders" class="hidden" style="margin-left:10px;">		        <a id="ShowSuppressionOrders" href="javascript:void(0);" onclick="javascript:uc.result.ShowSuppressionOrders()">View Suppressed Orders&nbsp;»</a>                       	        </span>        </td>    </tr></tbody></table>		</div></div>
             
  
             
         </div>
         
         <div style="float: right; width: 320px; padding: 0 3px 3px 3px;">
-            <div id="payment_contact_info" class="payment-info hidden" style="margin-bottom:8px;">
+            <div id="payment_contact_info" class="payment-info" style="margin-bottom: 8px; position: relative;">
 				<div class="results_table_header">Contact Information:</div>
 				<div>
 					<dl>
@@ -3878,13 +3868,13 @@ position:absolute;
 					<dl grp="special_contact2">
 					    <dt>Company Name(<span class="RequiredFieldTip">*</span>): </dt>
 					    <dd>
-						    <input type="text" id="payment_contact_company" name="payment_contact_company" style="width: 130px;" tabindex="4">
+						    <input type="text" id="payment_contact_company" name="payment_contact_company" style="width: 130px;" tabindex="4" disabled="disabled">
                         </dd>
                     </dl>
 					<dl class="select-country hidden">
 					   <dt>Country:</dt>
 					   <dd>
-					      <div id="countriesOfContactDiv"></div>
+					      <div id="countriesOfContactDiv"><input type="radio" id="countryOfContactUS" name="countryOfContact" value="US" onclick="javascript:uc.payment.LoadStatesOfContactByCountry();" checked="checked"><label id="countryOfContactUSlabel" for="countryOfContactUS">USA</label><input type="radio" id="countryOfContactCA" name="countryOfContact" value="CA" onclick="javascript:uc.payment.LoadStatesOfContactByCountry();"><label id="countryOfContactCAlabel" for="countryOfContactCA">Canada</label></div>
 					   </dd>
 					</dl>
 					<dl>
@@ -3903,9 +3893,7 @@ position:absolute;
 						<dt><span id="contact_state">State</span>(<span class="RequiredFieldTip">*</span>): </dt>
 						<dd>
 							<span class="select_border">
-								<select id="payment_contact_state" name="payment_contact_state" tabindex="6" style="width: 130px;">
-									<option value="">---</option>
-								</select>
+								<select id="payment_contact_state" name="payment_contact_state" tabindex="6" style="width: 130px;" value="AL"><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="DC">DC</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
 							</span>							
 						</dd>
 					</dl>
@@ -3919,7 +3907,7 @@ position:absolute;
 					<dl>
 						<dt>Telephone(<span class="RequiredFieldTip">*</span>): </dt>
 						<dd>
-							<input type="text" id="payment_contact_phone" name="payment_contact_phone" style="width: 90px;" tabindex="8" title="phone">
+							<input type="text" id="payment_contact_phone" name="payment_contact_phone" style="width: 90px;" tabindex="8" title="phone" value="(613) 646-752">
 							<span>X</span>
 							<input type="text" id="payment_contact_phoneext" style="width: 27px;" tabindex="9" title="phone ext">
 						</dd>
@@ -3972,7 +3960,7 @@ position:absolute;
         <div class="break"></div>
 		<div id="payment_bill_info" class="payment-info">
 			<div class="results_table_header">Payment Information:</div>
-			<div id="same_as_contact" class="hidden">
+			<div id="same_as_contact" class="">
 				<input type="checkbox" id="payment_bill_same_as_contact" tabindex="12">
 				<label for="payment_bill_same_as_contact">Same as Contact Information</label>
 			</div> 
@@ -3982,7 +3970,7 @@ position:absolute;
 			    
 			</div>
 			<div class="break"></div>
-			<div id="payment_bill_creditcard" class="hidden">
+			<div id="payment_bill_creditcard" class="">
 			    <div><a id="aMyCardList" href="https://www.sl360.com/r/MailingLists.aspx?DataSource=10#" style="font-weight:bold; display:none;">My Card List</a></div>
 			   
 			   <div id="iconVisa"></div>
@@ -4063,7 +4051,7 @@ position:absolute;
                     <dl class="select-country hidden">
 				       <dt>Country:</dt>
 				       <dd>
-				          <div id="countriesOfBillDiv"></div>
+				          <div id="countriesOfBillDiv"><input type="radio" id="countryOfBillUS" name="countryOfBill" value="US" onclick="javascript:uc.payment.LoadStatesOfBillByCountry();" checked="checked"><label id="countryOfBillUSlabel" for="countryOfBillUS">USA</label><input type="radio" id="countryOfBillCA" name="countryOfBill" value="CA" onclick="javascript:uc.payment.LoadStatesOfBillByCountry();"><label id="countryOfBillCAlabel" for="countryOfBillCA">Canada</label></div>
 				       </dd>
 				    </dl>
                     <dl>
@@ -4082,17 +4070,15 @@ position:absolute;
                         <dt><span id="bill_state">State</span>(<span class="RequiredFieldTip">*</span>): </dt>
                         <dd>
                             <span class="select_border">
-							    <select id="payment_bill_state" name="payment_bill_state" tabindex="21" style="width: 130px;">
-								    <option value="">---</option>
-							    </select>
+							    <select id="payment_bill_state" name="payment_bill_state" tabindex="21" style="width: 130px;" value="AL"><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="DC">DC</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
 						    </span>						
     							
 						    </dd>
 					    </dl>
 				    <dl>
-						    <dt><span id="bill_zip" class="bill_zip">Zip</span>(<span class="RequiredFieldTip">*</span>): </dt>
+						    <dt><span id="bill_zip" class="bill_zip">ZIP</span>(<span class="RequiredFieldTip">*</span>): </dt>
 						    <dd>
-						    <input type="text" maxlength="5" id="payment_bill_zip" title="Zip" name="payment_bill_zip" tabindex="22" class="input" style="width: 130px;">
+						    <input type="text" id="payment_bill_zip" title="Zip" name="payment_bill_zip" tabindex="22" class="input" style="width: 130px;">
                         </dd>
                        
                     </dl>
@@ -4139,7 +4125,7 @@ position:absolute;
 			
 		</div> 
 		
-		<div id="payment_interesting" class="payment_interesting hidden">
+		<div id="payment_interesting" class="payment_interesting">
             <div style="float: left;">
                 <input type="checkbox" id="payment_send_email_to_audience" name="payment_send_email_to_audience"></div>
             <div style="float: left; width: 280px; margin-left: 3px;">
@@ -4160,8 +4146,7 @@ position:absolute;
     <div class="break">
     </div>
     <div>
-        <div id="ct_results_occupant">
-        </div>
+        <div id="ct_results_occupant"></div>
     </div>
     <div class="hidden">
         <div id="ct_results_save_creditCard" style="width: 880px; padding: 0 10px 5px 10px;">
@@ -4327,7 +4312,7 @@ position:absolute;
 							</select>
 						</span></td>        
 						  <td class="label-right">Country:</td>
-				   <td class="label-left"> <div id="divcountries"></div></td>
+				   <td class="label-left"> <div id="divcountries"><input type="radio" id="countryUS" name="country" value="US" onclick="javascript:uc.payment.LoadStatesOfByCountry();" checked="checked"><label id="countryUSlabel" for="countryUS">USA</label><input type="radio" id="countryCA" name="country" value="CA" onclick="javascript:uc.payment.LoadStatesOfByCountry();"><label id="countryCAlabel" for="countryCA">Canada</label></div></td>
 					   <td class="label-right"><span id="Span4" class="bill_zip">Zip</span>(<span class="RequiredFieldTip">*</span>): </td>
 				   <td class="label-left"><input type="text" maxlength="5" id="txtZip" title="Zip" name="txtZip" tabindex="22" class="input" style="width: 100px;"></td>
 				 
@@ -4340,9 +4325,7 @@ position:absolute;
 				    
                <td class="label-right"><span id="Span5">State</span>(<span class="RequiredFieldTip">*</span>):  </td>
 				   <td class="label-left"><span class="select_border">
-							<select id="credit_state" name="credit_state" tabindex="21" title="Zip" style="width: 100px;">
-								<option value="">---</option>
-							</select>
+							<select id="credit_state" name="credit_state" tabindex="21" title="Zip" style="width: 100px;" value="AL"><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="DC">DC</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
 						</span>		</td>
 						
               
@@ -4369,187 +4352,7 @@ position:absolute;
 	</div>    
         
         </div>
-        <div id="ct_results_save_count" style="width: 400px; padding: 0 10px 5px 10px;">
-        <div id="SaveCount_Google_Analytics_Js_For_SLC" class="hidden"></div>
-            <div id="ct_results_save_count_edit">
-                    <div class="dialog-header" id="ct_result_save_count_header">
-                        <div class="dialog-title">
-                            Save List Count</div>
-                        <div class="break">
-                        </div>
-                        <div class="dialog-description">
-                            <span>Please complete the form below to save your list selections. Upon completion you
-                                will:</span>
-                            <ul style="list-style-type: decimal; margin-top: 0pt; margin-bottom: 0pt;">
-                                <li>Instantly receive links to download (pdf) and print this quote</li>
-                                <li>Receive an email with a link to retrieve your saved count</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="break"></div>
-                    <hr size="1">
-                    <div class="dialog-body">
-                        <dl>
-                            <dt>First Name:(<span class="RequiredFieldTip">*</span>) </dt>
-                            <dd>
-                                <input type="text" id="results_sc_firstname" name="results_sc_firstname" style="width: 200px;" maxlength="63" title="First Name">
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Last Name:(<span class="RequiredFieldTip">*</span>) </dt>
-                            <dd>
-                                <input type="text" id="results_sc_lastname" name="results_sc_lastname" style="width: 200px;" maxlength="63" title="Last Name">
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Company Name: (<span class="RequiredFieldTip">*</span>) </dt>
-                            <dd>
-                                <input type="text" id="results_sc_company" name="results_sc_company" style="width: 200px;" title="Company Name">
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Email:(<span class="RequiredFieldTip">*</span>) </dt>
-                            <dd>
-                                <input type="text" id="results_sc_email" name="results_sc_email" style="width: 200px;" title="Email">
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Telephone:</dt>
-                            <dd>
-                                <input type="text" id="results_sc_phone" style="width: 120px;" title="Phone">
-                                <span>Ext:</span>
-                                <input type="text" id="results_sc_phoneext" style="width: 50px;" title="Ext">
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Name This Count:(<span class="RequiredFieldTip">*</span>) </dt>
-                            <dd>
-                                <input type="text" id="results_sc_ordername" name="results_sc_ordername" maxlength="64" style="width: 200px;" title="Order Name">
-                                <input type="button" class="slhelp" primarykey="Name Count"><i class="fa fa-question-circle tip slhelp hidden" primarykey="Name Count" aria-hidden="true"></i>
-                            </dd>
-                        </dl>
-                        <div class="break">
-                        </div>
-                        <dl>
-                            <dd>
-                                <span class="RequiredFieldTip">*</span> Required</dd>
-                        </dl>
-                        <div class="break">
-                        </div>
-                        <div>
-                           <div id="results_sc_callme_option">
-                               <input type="checkbox" id="results_sc_callme"><label for="results_sc_callme">
-                                    Please call me to discuss this <span id="ct_result_save_count_special">list</span> in more detail.</label>
-                           </div>
-                           <div id="slc_interesting" class="slc_interesting hidden">
-                                <div>
-                                    <input type="checkbox" id="results_sc_contact_me">
-                                <label for="results_sc_contact_me">
-                                    Please contact me to discuss email marketing campaigns.</label>
-                                </div>
-                                <div class="hidden">
-                                    <input type="checkbox" id="results_sc_contact_list">
-                                    <label for="results_sc_contact_list">
-                                        Contact me about saving 15% on all list orders.</label>
-                                </div>
-                                
-                           </div>
-                           <div class="hidden">
-                            <input type="checkbox" id="results_sc_orderforclient"><label for="results_sc_orderforclient">
-                                I order leads for my clients. Contact me about <span class="SiteName">SL360</span>'s
-                                Reseller programs.</label>
-                           </div>
-                        </div>
-                    </div>
-                    <hr size="1" style="clear:right">
-                    <div class="break"></div>
-                    <div id="results_sc_taxnote" class="hidden" style="color:#626262;margin:10px 0;width:90%;text-align:left;">
-                        * Please note: This estimate does not include sales tax. Tax will be calculated and due at the time of fulfillment.
-                        Tax rate will be based on the customer's business address.
-                    </div>
-                    <div class="dialog-footer">
-                        <input type="button" class="button-save" onclick="uc.savecount.Continue();">
-                        <input type="button" class="button-cancel" onclick="framework.ui.CloseDialog();">
-                        <a class="forward-button btn btn-primary hidden" href="javascript:void(0);" onclick="uc.savecount.Continue();"><span>Save</span></a>
-                        <a class="forward-button btn btn-primary hidden" href="javascript:void(0);" onclick="framework.ui.CloseDialog();"><span>Cancel</span></a>
-                    </div>
-                    <div class="break"></div>
-                    <div class="dialog-error hidden" id="results_sc_error">
-                    
-                    </div>
-                    <div id="SLC_ValidateSummay" class="dialog-error hidden">
-			            <ul>
-			            </ul>
-		            </div>
-            </div>
-            
-            <div id="ct_results_save_count_success" class="hidden">
-                <div class="dialog-header">
-                    <div class="dialog-title">
-                        Thank you</div>
-                    <div class="break"></div>
-                    <div class="dialog-description">
-                        <span id="results_sc_success_titledesc">An email has been sent to clude.zhu@nirvana-info.com  with a link to retrieve your saved count. </span>
-                    </div>
-                </div>
-                <div class="break"></div>
-                <hr size="1">
-                <div class="dialog-body">
-                    <dl>
-                        <dt>First Name:</dt>
-                        <dd>
-                            <input type="text" id="results_sc_success_firstname" style="width: 200px;" disabled="">
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Last Name:</dt>
-                        <dd>
-                            <input type="text" id="results_sc_success_lastname" style="width: 200px;" disabled="">
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Company Name: </dt>
-                        <dd>
-                            <input type="text" id="results_sc_success_company" style="width: 200px;" disabled="">
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Email:</dt>
-                        <dd>
-                            <input type="text" id="results_sc_success_email" style="width: 200px;" disabled="">
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Telephone:</dt>
-                        <dd>
-                            <input type="text" id="results_sc_success_phone" style="width: 120px;" disabled="">
-                            <span>Ext:</span>
-                            <input type="text" id="results_sc_success_phoneext" style="width: 50px;" disabled="">
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Name This Count:</dt>
-                        <dd>
-                            <input type="text" id="results_sc_success_ordername" style="width: 200px;" disabled="">
-                        </dd>
-                    </dl>
-                    <div class="break">
-                    </div>
-
-                    <div>
-                        <span><strong>My Quote:</strong></span>
-                        <a title="Click to print detail info" target="_blank" href="https://www.sl360.com/r/oc/orderdetailprint.aspx?type=count"><img alt="" style="height: 25px; vertical-align: middle;" src="./index_files/print_icon.gif"><span> Print</span></a>
-                        <a title="Click to print detail info with pdf format" target="_blank" href="https://www.sl360.com/r/oc/orderdetailpdf.aspx"><img style="height: 25px; vertical-align: middle;" alt="" src="./index_files/pdf.gif"><span> Save</span></a>
-                    </div>
-                </div>
-                <hr size="1" style="clear:right">
-                <div class="break"></div>
-                <div class="dialog-footer">
-                    <input type="button" class="button-close" onclick="framework.ui.CloseDialog();">
-                    <a class="forward-button btn btn-primary hidden" href="javascript:void(0);" onclick="framework.ui.CloseDialog();"><span>Close</span></a>
-                </div>
-            </div>
-        </div>
+        
         <div id="ct_results_promocode_popup" style="width: 400px;">
             <div class="dialog-header">
                 <div class="dialog-title">
@@ -4616,7 +4419,187 @@ position:absolute;
             </div>
             <div class="break"></div>
         </div>
-    </div>
+    <div id="ct_results_save_count" style="width: 400px; padding: 0 10px 5px 10px;">
+        <div id="SaveCount_Google_Analytics_Js_For_SLC" class="hidden"><script type="text/javascript">try {var google_conversion_id = 1072646300;var google_conversion_language = "en_US";var google_conversion_format = "1";var google_conversion_color = "ffffff";var google_conversion_label = "Zl1MCNHaRhCckb3_Aw";var google_conversion_value = 3;pageTracker._trackPageview("/0480296263/goal");} catch (err) { }</script><noscript>&lt;div style="display:inline;"&gt;&lt;img height='1' width='1' style="border-style:none;" alt='' src='http://www.googleadservices.com/pagead/conversion/1072646300/?value=3&amp;amp;label=Zl1MCNHaRhCckb3_Aw&amp;amp;guid=ON&amp;amp;script=0' /&gt;&lt;/div&gt;</noscript></div>
+            <div id="ct_results_save_count_edit" style="position: relative;" class="hidden">
+                    <div class="dialog-header" id="ct_result_save_count_header">
+                        <div class="dialog-title">
+                            Save List Count</div>
+                        <div class="break">
+                        </div>
+                        <div class="dialog-description">
+                            <span>Please complete the form below to save your list selections. Upon completion you
+                                will:</span>
+                            <ul style="list-style-type: decimal; margin-top: 0pt; margin-bottom: 0pt;">
+                                <li>Instantly receive links to download (pdf) and print this quote</li>
+                                <li>Receive an email with a link to retrieve your saved count</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="break"></div>
+                    <hr size="1">
+                    <div class="dialog-body">
+                        <dl>
+                            <dt>First Name:(<span class="RequiredFieldTip">*</span>) </dt>
+                            <dd>
+                                <input type="text" id="results_sc_firstname" name="results_sc_firstname" style="width: 200px;" maxlength="63" title="First Name" class="valid">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Last Name:(<span class="RequiredFieldTip">*</span>) </dt>
+                            <dd>
+                                <input type="text" id="results_sc_lastname" name="results_sc_lastname" style="width: 200px;" maxlength="63" title="Last Name" class="valid">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Company Name: (<span class="RequiredFieldTip">*</span>) </dt>
+                            <dd>
+                                <input type="text" id="results_sc_company" name="results_sc_company" style="width: 200px;" title="Company Name" class="valid">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Email:(<span class="RequiredFieldTip">*</span>) </dt>
+                            <dd>
+                                <input type="text" id="results_sc_email" name="results_sc_email" style="width: 200px;" title="Email" class="valid">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Telephone:</dt>
+                            <dd>
+                                <input type="text" id="results_sc_phone" style="width: 120px;" title="Phone" value="(613) 646-752">
+                                <span>Ext:</span>
+                                <input type="text" id="results_sc_phoneext" style="width: 50px;" title="Ext">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Name This Count:(<span class="RequiredFieldTip">*</span>) </dt>
+                            <dd>
+                                <input type="text" id="results_sc_ordername" name="results_sc_ordername" maxlength="64" style="width: 200px;" title="Order Name" class="valid">
+                                <input type="button" class="slhelp" primarykey="Name Count"><i class="fa fa-question-circle tip slhelp hidden" primarykey="Name Count" aria-hidden="true"></i>
+                            </dd>
+                        </dl>
+                        <div class="break">
+                        </div>
+                        <dl>
+                            <dd>
+                                <span class="RequiredFieldTip">*</span> Required</dd>
+                        </dl>
+                        <div class="break">
+                        </div>
+                        <div>
+                           <div id="results_sc_callme_option">
+                               <input type="checkbox" id="results_sc_callme"><label for="results_sc_callme">
+                                    Please call me to discuss this <span id="ct_result_save_count_special">list</span> in more detail.</label>
+                           </div>
+                           <div id="slc_interesting" class="slc_interesting hidden">
+                                <div>
+                                    <input type="checkbox" id="results_sc_contact_me">
+                                <label for="results_sc_contact_me">
+                                    Please contact me to discuss email marketing campaigns.</label>
+                                </div>
+                                <div class="hidden">
+                                    <input type="checkbox" id="results_sc_contact_list">
+                                    <label for="results_sc_contact_list">
+                                        Contact me about saving 15% on all list orders.</label>
+                                </div>
+                                
+                           </div>
+                           <div class="hidden">
+                            <input type="checkbox" id="results_sc_orderforclient"><label for="results_sc_orderforclient">
+                                I order leads for my clients. Contact me about <span class="SiteName">SL360</span>'s
+                                Reseller programs.</label>
+                           </div>
+                        </div>
+                    </div>
+                    <hr size="1" style="clear:right">
+                    <div class="break"></div>
+                    <div id="results_sc_taxnote" class="hidden" style="color:#626262;margin:10px 0;width:90%;text-align:left;">
+                        * Please note: This estimate does not include sales tax. Tax will be calculated and due at the time of fulfillment.
+                        Tax rate will be based on the customer's business address.
+                    </div>
+                    <div class="dialog-footer">
+                        <input type="button" class="button-save" onclick="uc.savecount.Continue();">
+                        <input type="button" class="button-cancel" onclick="framework.ui.CloseDialog();">
+                        <a class="forward-button btn btn-primary hidden" href="javascript:void(0);" onclick="uc.savecount.Continue();"><span>Save</span></a>
+                        <a class="forward-button btn btn-primary hidden" href="javascript:void(0);" onclick="framework.ui.CloseDialog();"><span>Cancel</span></a>
+                    </div>
+                    <div class="break"></div>
+                    <div class="dialog-error hidden" id="results_sc_error">
+                    
+                    </div>
+                    <div id="SLC_ValidateSummay" class="dialog-error hidden" style="display: none;">
+			            <ul style="display: none;">
+			            </ul>
+		            </div>
+            </div>
+            
+            <div id="ct_results_save_count_success" class="">
+                <div class="dialog-header">
+                    <div class="dialog-title">
+                        Thank you</div>
+                    <div class="break"></div>
+                    <div class="dialog-description">
+                        <span id="results_sc_success_titledesc">An email has been sent to seaasun@qq.com with a link to retrieve your saved count. </span>
+                    </div>
+                </div>
+                <div class="break"></div>
+                <hr size="1">
+                <div class="dialog-body">
+                    <dl>
+                        <dt>First Name:</dt>
+                        <dd>
+                            <input type="text" id="results_sc_success_firstname" style="width: 200px;" disabled="">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Last Name:</dt>
+                        <dd>
+                            <input type="text" id="results_sc_success_lastname" style="width: 200px;" disabled="">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Company Name: </dt>
+                        <dd>
+                            <input type="text" id="results_sc_success_company" style="width: 200px;" disabled="">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Email:</dt>
+                        <dd>
+                            <input type="text" id="results_sc_success_email" style="width: 200px;" disabled="">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Telephone:</dt>
+                        <dd>
+                            <input type="text" id="results_sc_success_phone" style="width: 120px;" disabled="">
+                            <span>Ext:</span>
+                            <input type="text" id="results_sc_success_phoneext" style="width: 50px;" disabled="">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Name This Count:</dt>
+                        <dd>
+                            <input type="text" id="results_sc_success_ordername" style="width: 200px;" disabled="">
+                        </dd>
+                    </dl>
+                    <div class="break">
+                    </div>
+
+                    <div>
+                        <span><strong>My Quote:</strong></span>
+                        <a title="Click to print detail info" target="_blank" href="https://www.sl360.com/r/oc/orderdetailprint.aspx?type=count"><img alt="" style="height: 25px; vertical-align: middle;" src="./index_files/print_icon.gif"><span> Print</span></a>
+                        <a title="Click to print detail info with pdf format" target="_blank" href="https://www.sl360.com/r/oc/orderdetailpdf.aspx"><img style="height: 25px; vertical-align: middle;" alt="" src="./index_files/pdf.gif"><span> Save</span></a>
+                    </div>
+                </div>
+                <hr size="1" style="clear:right">
+                <div class="break"></div>
+                <div class="dialog-footer">
+                    <input type="button" class="button-close" onclick="framework.ui.CloseDialog();">
+                    <a class="forward-button btn btn-primary hidden" href="javascript:void(0);" onclick="framework.ui.CloseDialog();"><span>Close</span></a>
+                </div>
+            </div>
+        </div></div>
     <div class="break">
     </div>
     <div>
@@ -5557,7 +5540,7 @@ position:absolute;
 
 			</div>
 		    
-			<div id="ct_step_payment" attr="orderstep_panel" class="hidden">
+			<div id="ct_step_payment" attr="orderstep_panel" class="hidden" style="position: relative;">
 				
 <style>
     .content-payment
@@ -6001,7 +5984,7 @@ position:absolute;
                 <dl>
                     <dt>Company Name(<span class="RequiredFieldTip">*</span>): </dt>
                     <dd>
-                        <input type="text" id="payment_contact_company" name="payment_contact_company" style="width: 130px;" title="company" tabindex="3">
+                        <input type="text" id="payment_contact_company" name="payment_contact_company" style="width: 130px;" title="company" tabindex="3" disabled="disabled">
                     </dd>
                 </dl>
                 <dl class="select-country hidden">
@@ -6793,7 +6776,7 @@ Payment Information:
             <a class="back-button start_over_button btn hidden" onclick="page.placeorder.TrackOrderPathGAEvent(&#39;Step 1 - GeoType&#39;,&#39;GeoType Start Over Button&#39;);" buttonname="order_stepbt_startover" buttonkey="32" href="https://www.sl360.com/r/oc/orderselectdatasource.aspx"><span>Start Over</span></a>
             <a class="back-button btn" href="javascript:void(0);" buttonname="order_stepbt_back" buttonkey="1" title="Return to previous screen"><span>Back</span></a>
             <a class="forward-button btn btn-primary" href="javascript:void(0);" buttonname="order_stepbt_next" buttonkey="2"><span>Next</span></a>
-            <a class="forward-button save_count_button btn btn-primary  hidden" href="javascript:void(0);" buttonname="order_stepbt_savecount" buttonkey="4"><span>Save Count</span></a>
+            <a class="forward-button save_count_button btn btn-primary hidden" href="javascript:void(0);" buttonname="order_stepbt_savecount" buttonkey="4"><span>Save Count</span></a>
             <a class="forward-button place_order_button hidden360 btn button-success hidden" href="javascript:void(0);" buttonname="order_stepbt_placeorder" buttonkey="8"><span>Place Order</span></a>
             <a class="forward-button home-button btn btn-primary hidden" onclick="page.placeorder.TrackOrderPathGAEvent(&#39;Step 3 - Success&#39;,&#39;Place Another Order Button&#39;);" buttonname="order_stepbt_placeanotherorder" buttonkey="16" href="https://www.sl360.com/r/oc/orderselectdatasource.aspx"><span>Home</span></a>
             <a class="forward-button print-button btn btn-primary hidden" buttonname="order_stepbt_printorder" buttonkey="256" href="javascript:void(0);"><span>Print</span></a>
